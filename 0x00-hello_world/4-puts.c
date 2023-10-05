@@ -2,7 +2,7 @@
 /**
  *main - prints "Programming is like building a multiligual pizzle"
  *
- * Return: 0 if successful
+ *Return: 0 if successful
  */
 int main(void) 
 {
