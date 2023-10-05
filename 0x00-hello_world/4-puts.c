@@ -1,9 +1,8 @@
 #include <stdio.h>
 /**
- *Main function prints "Programming is like building a multiligual puzzle"
+ *main - prints "Programming is like building a multiligual pizzle"
  *
- * Returns (0) if successful
- *
+ * Return: 0 if successful
  */
 int main(void) 
 {
