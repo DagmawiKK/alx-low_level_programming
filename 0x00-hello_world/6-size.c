@@ -2,7 +2,7 @@
 /**
  *main - Checks the size of different data types
  *
- *Return - 0 if successful
+ *Return: 0 if successful
  */
 int main(void)
 {
