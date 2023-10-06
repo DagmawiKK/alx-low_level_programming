@@ -3,9 +3,9 @@
 /**
  *main - prints the alphabet in lower case
  *
- *Return: SUCCESS if successful
+ *Return: 1 if successful
  */
-char main(void)
+int main(void)
 {
 	char a;
 	char z;
@@ -17,5 +17,5 @@ char main(void)
 		putchar(a);
 		a += 1;
 	}
-	return ("SUCCESS");
+	return (1);
 }
