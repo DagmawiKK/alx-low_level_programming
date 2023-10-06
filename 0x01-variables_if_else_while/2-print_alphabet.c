@@ -1,8 +1,9 @@
 #include<stdio.h>
+#include<string.h>
 /**
  *main - prints the alphabet in lower case
  *
- *Return: 1 if successful
+ *Return: SUCCESS if successful
  */
 int main(void)
 {
@@ -12,10 +13,11 @@ int main(void)
 
 	a = 'a';
 	z = 'z';
-	while (some <= z && some >= a)
+	while (some <= z)
 	{
+		strcpy(some, a);
 		putchar(some);
 		some += 1;
 	}
-	return (1);
+	exit(SUCCESS);
 }
