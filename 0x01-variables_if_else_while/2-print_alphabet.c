@@ -3,7 +3,7 @@
 /**
  *main - prints the alphabet in lower case
  *
- *Return: 1 if successful
+ *Return: 0 if successful
  */
 int main(void)
 {
@@ -15,7 +15,8 @@ int main(void)
 	while (a <= z)
 	{
 		putchar(a);
+		putchat("\n");
 		a += 1;
 	}
-	return (1);
+	return (o);
 }
