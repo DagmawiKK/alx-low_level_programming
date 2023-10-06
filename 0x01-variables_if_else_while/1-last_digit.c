@@ -6,7 +6,7 @@
 /**
  *main - assigns random n value and checks a condition
  *
- *Return 0 if it successful
+ *Return: 0 if it successful
  */
 int main(void)
 {
@@ -18,10 +18,10 @@ int main(void)
 	/* your code goes there */
 	last_digit = n % 10;
 	if (last_digit > 5)
-		printf("%d is %d and is greater than 5", n, last_digit);
+		printf("%d is %d and is greater than 5\n", n, last_digit);
 	else if (last_digit < 6 && last_digit != 0)
-		printf("%d is %d and is less than 6 and not 0", n, last_digit);
+		printf("%d is %d and is less than 6 and not 0\n", n, last_digit);
 	else
-		printf("%d is %d and is 0", n, last_digit);
+		printf("%d is %d and is 0\n", n, last_digit);
 	return (0);
 }
