@@ -6,10 +6,10 @@
  */
 int main(void)
 {
-	char zero;
+	int zero;
 
-	zero = '0';
-	while (zero <= '9')
+	zero = 48;
+	while (zero <= 57)
 	{
 		putchar(zero);
 		zero++;
