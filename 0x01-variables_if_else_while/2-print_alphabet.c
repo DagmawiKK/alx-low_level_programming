@@ -9,15 +9,13 @@ int main(void)
 {
 	char a;
 	char z;
-	char some;
 
 	a = 'a';
 	z = 'z';
 	while (some <= z)
 	{
-		strcpy(some, a);
-		putchar(some);
-		some += 1;
+		putchar(a"\n");
+		a += 1;
 	}
 	exit(SUCCESS);
 }
