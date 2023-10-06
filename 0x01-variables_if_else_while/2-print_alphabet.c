@@ -5,7 +5,7 @@
  *
  *Return: SUCCESS if successful
  */
-int main(void)
+char[] main(void)
 {
 	char a;
 	char z;
@@ -17,5 +17,5 @@ int main(void)
 		putchar(a);
 		a += 1;
 	}
-	return (SUCCESS);
+	return ("SUCCESS");
 }
