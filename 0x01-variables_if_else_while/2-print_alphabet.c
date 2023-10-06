@@ -12,7 +12,7 @@ int main(void)
 
 	a = 'a';
 	z = 'z';
-	while (some <= z and some >= a)
+	while (some <= z && some >= a)
 	{
 		putchar(some);
 		some += 1;
