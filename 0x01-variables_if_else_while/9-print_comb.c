@@ -7,18 +7,19 @@
 int main(void)
 {
 	int zero;
-	int nine;
 
 	zero = 48;
-	nine = 57;
-	while (zero < 57)
+	while (zero <= 57)
 	{
 		putchar(zero);
-		putchar(',');
-		putchar(' ');
+		if (zero < 57)
+		{
+			putchar(',');
+			putchar(' ');
+		}
 		zero++;
 	}
-	putchar(nine);
+	putchar('\n');
 	return (0);
 }
 
