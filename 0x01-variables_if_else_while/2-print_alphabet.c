@@ -5,7 +5,7 @@
  *
  *Return: SUCCESS if successful
  */
-char[] main(void)
+char main(void)
 {
 	char a;
 	char z;
