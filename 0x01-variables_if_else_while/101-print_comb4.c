@@ -1,9 +1,9 @@
 #include<stdio.h>
 #include<string.h>
 /**
- *main - 
+ *main -  prints compinations of int from 0 to 9
  *
- *Return: 
+ *Return: Always 0 (Successful)
  */
 int main(void)
 {
@@ -13,20 +13,17 @@ int main(void)
 
 	for (i = 0; i <= 7; i++)
 	{
-		for (j = 1; j <= 8; j++)
+		for (j = i + 1; j <= 8; j++)
 		{
-			for (k = 2; k <= 9; k++)
+			for (k = j + 1; k <= 9; k++)
 			{
-				if (i != j && j != k && i != k)
+				putchar('0' + i);
+				putchar('0' + j);
+				putchar('0' + k);
+				if (i < 7 || j < 8 || k < 9)
 				{
-					putchar('0' + i);
-					putchar('0' + j);
-					putchar('0' + k);
-					if (i <= 7)
-					{
-						putchar(',');
-						putchar(' ');
-					}
+					putchar(',');
+					putchar(' ');
 				}
 			}
 		}
