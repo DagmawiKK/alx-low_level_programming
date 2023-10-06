@@ -11,8 +11,9 @@ int main(void)
 	start = 0;
 	while (start < 10)
 	{
-		printf("%d\n", start);
+		printf("%d", start);
 		start++;
 	}
+	printf("\n");
 	return (0);
 }
