@@ -17,5 +17,5 @@ int main(void)
 		putchar(a);
 		a += 1;
 	}
-	exit(SUCCESS);
+	return (SUCCESS);
 }
