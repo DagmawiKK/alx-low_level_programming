@@ -1,4 +1,4 @@
-#include<stdio.h>
+#include "main.h"
 /**
  *main - prints _putchar with a new line
  *
@@ -12,9 +12,9 @@ int main(void)
 	i = 0;
 	while (my_char[i] != '\0')
 	{
-		putchar(my_char[i]);
+		_putchar(my_char[i]);
 		i++;
 	}
-	putchar('\n');
+	_putchar('\n');
 	return (0);
 }
