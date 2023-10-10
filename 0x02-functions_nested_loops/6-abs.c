@@ -1,14 +1,14 @@
 #include "main.h"
 /**
  *_abs - finds absolute value of an integer
- *@int: the checked integer
+ *@n: the checked integer
  *Return: Always 0 (Successful)
  */
-int _abs(int)
+int _abs(int n)
 {
-	if (int >= 0)
-		_putchar(int);
+	if (n >= 0)
+		_putchar(n);
 	else
-		_putchar(int * (-1));
+		_putchar(n * (-1));
 	return (0);
 }
