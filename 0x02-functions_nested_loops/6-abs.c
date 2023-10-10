@@ -2,13 +2,12 @@
 /**
  *_abs - finds absolute value of an integer
  *@n: the checked integer
- *Return: Always 0 (Successful)
+ *Return: Always n if positive and 0 else -n
  */
 int _abs(int n)
 {
 	if (n >= 0)
-		_putchar(n);
+		return (n);
 	else
-		_putchar(n * (-1));
-	return (0);
+		return (-n)
 }
