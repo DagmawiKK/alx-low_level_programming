@@ -4,7 +4,7 @@
  *
  *Return: Always nothing
  */
-void print_alpahbet(void)
+void print_alphabet(void)
 {
 	int i;
 
