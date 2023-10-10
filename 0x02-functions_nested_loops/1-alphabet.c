@@ -2,14 +2,8 @@
 /**
  *main -  prints the alphabet, in lowercase, followed by a new line.
  *
- *Return: Always 0 (Successful)
+ *Return: Always nothing
  */
-int main(void)
-{
-	print_alphabet(void);
-	return (0);
-}
-
 void print_alpahbet(void)
 {
 	int i;
