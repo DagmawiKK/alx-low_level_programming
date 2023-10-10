@@ -18,7 +18,7 @@ void times_table(void)
 			multiple = i * j;
 			if (j == 0)
 			{
-				_putchar(k + '0');
+				_putchar(multiple + '0');
 			}
 			if (multiple < 10 && j != 0)
 			{
@@ -31,9 +31,10 @@ void times_table(void)
 			{
 				_putchar(',');
 				_putchar(' ');
-				_putchar((k / 10) + '0');
-				_putchar((k % 10) + '0');
-		}
+				_putchar((multiple / 10) + '0');
+				_putchar((multiple % 10) + '0');
+			}
 		_putchar('\n');
+		}
 	}
 }
