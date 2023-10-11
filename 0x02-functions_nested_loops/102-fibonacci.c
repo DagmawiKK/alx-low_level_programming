@@ -6,15 +6,15 @@
  */
 int main(void)
 {
-	long long fib1, fib2, nextFib;
+	unsigned long fib1, fib2, nextFib;
 
 	fib1 = 1;
 	fib2 = 2;
-	printf("%lld, %lld", fib1, fib2);
+	printf("%lu, %lu", fib1, fib2);
 	for (int i = 3; i <= 50; i++)
 	{
 		nextFib = fib1 + fib2;
-		printf(", %lld", nextFib);
+		printf(", %lu", nextFib);
 		fib1 = fib2;
 		fib2 = nextFib;
 	}
