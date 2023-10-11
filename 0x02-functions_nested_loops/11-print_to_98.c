@@ -7,12 +7,8 @@
 void print_to_98(int n)
 {
 	int i;
-	int rem;
-	int mem;
 
 	i = 98;
-	rem = 0;
-	mem = 0;
 	while (n >= i)
 	{
 		printf("%d", n);
