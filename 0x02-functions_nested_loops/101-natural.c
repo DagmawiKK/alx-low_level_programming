@@ -7,7 +7,7 @@
 int main(void)
 {
 	int i, result;
-	
+
 	result = 0;
 	for (i = 1; i < 1024; i++)
 	{
@@ -17,5 +17,3 @@ int main(void)
 	printf("%d\n", result);
 	return (0);
 }
-
-		
