@@ -1,0 +1,35 @@
+#include "main.h"
+/**
+ *print_to_98 - prints all natural numbers from n to 98
+ *@n: the number two which 98 is counted from
+ *Return: void
+ */
+void print_to_98(int n)
+{
+	int i;
+	int rem;
+	int mem;
+
+	i = 98;
+	rem = 0;
+	mem = 0;
+	while (n >= i)
+	{
+		printf("%d", n);
+		n--;
+		if (n > i)
+		{
+			printf(", ");
+		}
+	}
+	if (n == i)
+		printf("%d", n);
+	while (n < i)
+	{
+		printf("%d", n);
+		if (n < i)
+		{
+			printf(", ");
+		}
+	}
+}
