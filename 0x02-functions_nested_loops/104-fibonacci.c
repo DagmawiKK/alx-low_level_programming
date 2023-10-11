@@ -6,7 +6,8 @@
  */
 int main(void)
 {
-	int term1, term2, next_term, count;
+	long term1, term2, next_term;
+	int count;
 
 	term1 = 1;
 	term2 = 2;
