@@ -2,7 +2,7 @@
 /**
  *times_table - prints times table from 0 to n
  *@n: number of times of the table
- *Return: 
+ *Return: 0 successful
  */
 int print_times_table(int n)
 {
@@ -45,8 +45,10 @@ int print_times_table(int n)
 					_putchar((multiple / 100) + '0');
 					_putchar((multiple / 10) + '0');
 					_putchar((multiple % 10) + '0');
+				}
 			}
 			_putchar('\n');
 		}
 	}
+	return (0);
 }
