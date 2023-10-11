@@ -22,6 +22,6 @@ int main(void)
 		term1 = term2;
 		term2 = next_term;
 	}
-	printf("Sum of even-valued terms: %d\n", sum);
+	printf("%d\n", sum);
 	return (0);
 }
