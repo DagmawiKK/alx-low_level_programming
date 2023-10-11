@@ -4,7 +4,7 @@
  *@n: number of times of the table
  *Return: 0 successful
  */
-int print_times_table(int n)
+void print_times_table(int n)
 {
 	int i;
 	int j;
@@ -50,5 +50,4 @@ int print_times_table(int n)
 			_putchar('\n');
 		}
 	}
-	return (0);
 }
