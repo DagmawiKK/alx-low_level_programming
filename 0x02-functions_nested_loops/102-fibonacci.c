@@ -7,11 +7,12 @@
 int main(void)
 {
 	unsigned long fib1, fib2, nextFib;
+	int i;
 
 	fib1 = 1;
 	fib2 = 2;
 	printf("%lu, %lu", fib1, fib2);
-	for (int i = 3; i <= 50; i++)
+	for (i = 3; i <= 50; i++)
 	{
 		nextFib = fib1 + fib2;
 		printf(", %lu", nextFib);
