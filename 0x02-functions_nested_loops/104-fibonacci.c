@@ -11,11 +11,11 @@ int main(void)
 
 	term1 = 1;
 	term2 = 2;
-	printf("%d, %d", term1, term2);
+	printf("%ld, %ld", term1, term2);
 	for (count = 3; count <= 98; count++)
 	{
 		next_term = term1 + term2;
-		printf(", %d", next_term);
+		printf(", %ld", next_term);
 		term1 = term2;
 		term2 = next_term;
 	}
