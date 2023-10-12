@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
@@ -12,21 +13,17 @@ int largest_number(int a, int b, int c)
 {
 	int largest;
 
-	if (a > b && a > c)
+	if (a > b && b > c)
 	{
-	largest = a;
+		largest = a;
 	}
-	else if (a > b && c > a)
+	else if (b > a && a > c)
 	{
-	largest = c;
+		largest = b;
 	}
-	else if (b > c)
+	else if (c > a && a > b)
 	{
-	largest = b;
-	}
-	else
-	{
-	largest = c;
+		largest = c;
 	}
 	return (largest);
 }
