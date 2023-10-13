@@ -2,24 +2,26 @@
 
 /**
  * print_number - prints an integer
- * @n: the integer to print
+ * @n: integer to be printed
  */
 void print_number(int n)
 {
-	char buffer[20];
-	int i = 0, sign = 1;
+	unsigned int n1;
 
 	if (n < 0)
 	{
-		sign = -1;
+		n1 = -n;
 		_putchar('-');
-		n = -n;
-	}
-	do
+	} else
 	{
-		buffer[i++] = n % 10 + '0';
-		n /= 10;
-	} while (n > 0);
-	while (--i >= 0)
-		_putchar(buffer[i]);
+		n1 = n;
+	}
+
+	if (n1 / 10 < 10)
+	{
+		print_number(n1 / 10);
+	}
+
+	_putchar((n1 % 10) + '0');
 }
+
