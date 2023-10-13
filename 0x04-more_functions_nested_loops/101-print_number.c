@@ -2,26 +2,24 @@
 
 /**
  * print_number - prints an integer
- * @n: integer to be printed
+ * @n: the integer to print
  */
 void print_number(int n)
 {
-	unsigned int sum_num;
+	char buffer[20];
+	int i = 0, sign = 1;
 
 	if (n < 0)
 	{
-		sum_num = -n;
+		sign = -1;
 		_putchar('-');
-	} else
-	{
-		sum_num = n;
+		n = -n;
 	}
-
-	if (some_num / 10)
+	do
 	{
-		print_number(some_num / 10);
-	}
-
-	_putchar((some_num % 10) + '0');
+		buffer[i++] = n % 10 + '0';
+		n /= 10;
+	} while (n > 0);
+	while (--i >= 0)
+		_putchar(buffer[i]);
 }
-
