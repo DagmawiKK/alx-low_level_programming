@@ -14,7 +14,7 @@ void puts2(char *str)
 
 	for (j = 0; str[j] != '\0'; j++)
 		count++;
-	for (i = 0; str[i] != '\0' && i < count; i = i + 2)
+	for (i = 0; str[i] != '\0' && i < count && str[i] != '\\' && str[i] != '0'; i = i + 2)
 		_putchar(str[i]);
 	_putchar('\n');
 }
