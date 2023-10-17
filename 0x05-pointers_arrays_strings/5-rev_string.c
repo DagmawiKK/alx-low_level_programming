@@ -15,6 +15,6 @@ void rev_string(char *s)
 	for (i = 0; s[i] != '\0'; i++)
 		count++;
 	for (j = count - 1; j >= 0; j--)
-	  fputs(s[j], stdout);
+	  fputc(s[j], stdout);
 	_putchar('\n');
 }
