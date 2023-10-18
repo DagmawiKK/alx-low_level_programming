@@ -22,7 +22,7 @@ int _atoi(char *s)
 	while (i < len && rem == 0)
 	{
 		if (s[i] == '-')
-			++d;
+			++mem;
 
 		if (s[i] >= '0' && s[i] <= '9')
 		{
@@ -30,7 +30,7 @@ int _atoi(char *s)
 			if (mem % 2)
 				digit = -digit;
 			n = n * 10 + digit;
-			f = 1;
+			rem = 1;
 			if (s[i + 1] < '0' || s[i + 1] > '9')
 				break;
 			rem = 0;
