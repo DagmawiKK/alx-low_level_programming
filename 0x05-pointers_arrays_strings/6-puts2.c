@@ -9,10 +9,18 @@
 void puts2(char *str)
 {
 	int i;
+  int j;
+  int count;
+  char *mem = str;
 
-	for (i = 0; str[i] != '\0'; i = i + 2)
+  count = 0;
+  for (j = 0; mem[j] != '\0'; j++)
+    count++;
+
+  
+	for (i = 0; i <= (count - 1); i++)
 	{
-		if (str[i] != '\0')
+		if (i % 2 == 0)
 			_putchar(str[i]);
 	}
 	_putchar('\n');
