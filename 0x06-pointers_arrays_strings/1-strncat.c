@@ -5,6 +5,7 @@
 *@dest: one of the strings
 *@src: the other string
 *@n: max number of byte
+*Return: destination of new string
 */
 
 char *_strncat(char *dest, char *src, int n)
