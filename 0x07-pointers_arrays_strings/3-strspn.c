@@ -3,7 +3,7 @@
 /**
 *_strspn - gets the length of a prefix substring
 *@s: the string checked
-*@c: character looked for
+*@accept: character looked for
 *Return:number of bytes in the initial segment of s
 */
 
