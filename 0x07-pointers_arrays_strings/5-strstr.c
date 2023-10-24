@@ -1,4 +1,5 @@
-#include "holberton.h"
+#include "main.h"
+
 /**
  * _strstr - function that locates a substring.
  *@haystack: first value -char
