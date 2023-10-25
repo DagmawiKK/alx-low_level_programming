@@ -1,7 +1,6 @@
 #include "main.h"
 
 /**
-*is_prime_number - checks is a number is prime
 *@n: the checked number
 *Return:	if the input integer is a prime number, otherwise return 0
 *check_prime - checks if a number is prime
@@ -16,7 +15,9 @@ int check_prime(int n, int i)
 		return (0);
 	return (check_prime(n, i + 1));
 }
-
+/**
+*is_prime_number - checks is a number is prime
+*/
 int is_prime_number(int n)
 {
 	if (n <= 1)
