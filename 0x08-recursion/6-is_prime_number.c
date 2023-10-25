@@ -4,7 +4,7 @@
 *is_prime_number - checks is a number is prime
 *@n: the checked number
 *Return:	if the input integer is a prime number, otherwise return 0
-*check_prime: checks if a number is prime
+*check_prime - checks if a number is prime
 *@i: possible divisor of n
 */
 
