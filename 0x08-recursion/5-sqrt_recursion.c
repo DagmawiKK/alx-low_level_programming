@@ -1,8 +1,9 @@
 #include "main.h"
 
 /**
-*_sqrt_recursion - calculates squareroot of a number
+*_sqrt - calculates squareroot of a number
 *@n: from which the sqaure root is calculated
+*@i: the degree of square root
 *Return: th sqaure root value
 */
 
