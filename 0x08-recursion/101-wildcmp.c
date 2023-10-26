@@ -1,5 +1,6 @@
 /**
- * wildcmp - recursively compares two strings with support for wildcard patterns
+ * wildcmp - recursively compares two strings
+ * with support for wildcard patterns
  * @s1: first string to compare
  * @s2: second string to compare
  * Return: 1 if the strings match, 0 otherwise
