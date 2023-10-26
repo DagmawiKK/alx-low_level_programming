@@ -42,9 +42,9 @@ int is_palindrome(char *s)
 	char *start;
 	char *end;
 
-	end = s + len - 1;
 	start = s;
 	len = str_len(s);
+	end = s + len - 1;
 	return (check_palindrome(s, start, end));
 }
 
