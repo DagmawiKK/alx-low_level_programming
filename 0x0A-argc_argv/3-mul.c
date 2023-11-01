@@ -20,9 +20,16 @@ int main(int argc, char *argv[])
 			_putchar(error[i]);
 		_putchar('\n');
 		return (1);
-	} else {
-		multiple = (int)*argv[1] * (int)*argv[2];
-		_putchar(multiple + '0');
+	}
+	else
+	{
+		multiple = (*argv[1] - '0') * (*argv[2] - '0');
+
+		while (multiple > 0)
+		{
+			_putchar((multiple % 10) + '0');
+			multiple /= 10;
+		}
 		_putchar('\n');
 		return (0);
 	}
