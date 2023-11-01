@@ -21,8 +21,8 @@ int main(int argc, char *argv[])
 		_putchar('\n');
 		return (1);
 	} else {
-		multiple = (int)argv[1] * (int)argv[2];
-		_putchar(sum + '0');
+		multiple = (int)*argv[1] * (int)*argv[2];
+		_putchar(multiple + '0');
 		_putchar('\n');
 		return (0);
 	}
