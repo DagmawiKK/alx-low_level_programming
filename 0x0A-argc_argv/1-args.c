@@ -13,8 +13,8 @@ int main(int argc, char *argv[])
 	count = 0;
 	while (*argv++)
 		count++;
-	putchar(count - 1 + '0');
-	putchar('\n');
+	_putchar(count - 1 + '0');
+	_putchar('\n');
 	(void)argc;
-	return 0;
+	return (0);
 }
