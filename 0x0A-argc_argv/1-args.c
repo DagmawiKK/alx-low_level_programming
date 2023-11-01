@@ -9,8 +9,12 @@
 
 int main(int argc, char *argv[])
 {
-	_putchar(argc + '0');
+	int i;
+
+	for (i = 0; *argv[i] != (NULL); i++)
+	;
+	_putchar((i + 1) + '0');
 	_putchar('\n');
-	(void) argv;
+
 	return (0);
 }
