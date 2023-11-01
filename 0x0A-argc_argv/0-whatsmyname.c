@@ -7,7 +7,7 @@
 * Return: Always 0 (Successful)
 */
 
-int main (argc, *argv[])
+int main (int argc, char *argv[])
 {
 	_putchar(*argv[0]);
 }
