@@ -10,7 +10,7 @@
 int main(int argc, char *argv[])
 {
 	int i;
-	int sum;
+	int multiple;
 
 	char error[] = "Error";
 
@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 		_putchar('\n');
 		return (1);
 	} else {
-		sum = (int)*argv[1] + (int)*argv[2];
+		multiple = (int)argv[1] * (int)argv[2];
 		_putchar(sum + '0');
 		_putchar('\n');
 		return (0);
