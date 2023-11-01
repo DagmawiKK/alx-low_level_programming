@@ -6,15 +6,15 @@
 * @argv: pointer to arguments passed
 * Return: Always 0 (Successful)
 */
-
 int main(int argc, char *argv[])
 {
-	int i;
+	int count;
 
-	for (i = 0; *argv[i] != (NULL); i++)
-	;
-	_putchar((i + 1) + '0');
-	_putchar('\n');
-
-	return (0);
+	count = 0;
+	while (*argv++)
+		count++;
+	putchar(count - 1 + '0');
+	putchar('\n');
+	(void)argc;
+	return 0;
 }
