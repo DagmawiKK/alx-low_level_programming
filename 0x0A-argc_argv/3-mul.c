@@ -9,28 +9,11 @@
 
 int main(int argc, char *argv[])
 {
-	int i;
-	int multiple;
-
-	char error[] = "Error";
-
 	if (argc != 3)
 	{
-		for (i = 0; error[i] != '\0'; i++)
-			_putchar(error[i]);
-		_putchar('\n');
+		printf("Error\n");
 		return (1);
 	}
-	else
-	{
-		multiple = (*argv[1] - '0') * (*argv[2] - '0');
-
-		while (multiple > 0)
-		{
-			_putchar((multiple % 10) + '0');
-			multiple /= 10;
-		}
-		_putchar('\n');
-		return (0);
-	}
+	printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
+	return (0);
 }
