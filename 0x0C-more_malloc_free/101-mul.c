@@ -1,126 +1,119 @@
-#include "main.h"
-#include <stdlib.h>
 #include <stdio.h>
-#include <ctype.h>
+#include <stdlib.h>
 
 /**
- * _is_zero - determines if any number is zero
- * @argv: argument vector.
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
  *
- * Return: no return.
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
  */
-void _is_zero(char *argv[])
+
+int _putchar(char c)
 {
-	int i, isn1 = 1, isn2 = 1;
+	return (write(1, &c, 1));
+}
 
-	for (i = 0; argv[1][i]; i++)
-		if (argv[1][i] != '0')
-		{
-			isn1 = 0;
-			break;
-		}
+/**
+ * _isdigit - checks if a string is composed only of digits
+ * @str: The string to check
+ *
+ * Return: 1 if the string is composed only of digits, 0 otherwise
+ */
 
-	for (i = 0; argv[2][i]; i++)
-		if (argv[2][i] != '0')
-		{
-			isn2 = 0;
-			break;
-		}
+int _isdigit(char *str)
+{
+	int i;
 
-	if (isn1 == 1 || isn2 == 1)
+	i = 0;
+	while (str[i])
 	{
-		printf("0\n");
-		exit(0);
+		if (str[i] < '0' || str[i] > '9')
+			return (0);
+		i++;
 	}
+	return (1);
 }
 
 /**
- * _initialize_array - set memery to zero in a new array
- * @ar: char array.
- * @lar: length of the char array.
+ * _strlen - computes the length of a string
+ * @str: The string to compute the length of
  *
- * Return: pointer of a char array.
+ * Return: The length of the string
  */
-char *_initialize_array(char *ar, int lar)
-{
-	int i = 0;
 
-	for (i = 0; i < lar; i++)
-		ar[i] = '0';
-	ar[lar] = '\0';
-	return (ar);
+int _strlen(char *str)
+{
+	int i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }
 
 /**
- * _checknum - determines length of the number
- * and checks if number is in base 10.
- * @argv: arguments vector.
- * @n: row of the array.
+ * _mul - multiplies two positive numbers and prints the result
+ * @num1: The first number to multiply
+ * @num2: The second number to multiply
  *
- * Return: length of the number.
+ * Return: void
  */
-int _checknum(char *argv[], int n)
+
+void _mul(char *num1, char *num2)
 {
-	int ln;
+	int len1, len2;
+	int *result;
 
-	for (ln = 0; argv[n][ln]; ln++)
-		if (!isdigit(argv[n][ln]))
-		{
-			printf("Error\n");
-			exit(98);
-		}
+	len1 = _strlen(num1);
+	len2 = _strlen(num2);
 
-	return (ln);
-}
-
-/**
- * main - Entry point.
- * program that multiplies two positive numbers.
- * @argc: number of arguments.
- * @argv: arguments vector.
- *
- * Return: 0 - success.
- */
-int main(int argc, char *argv[])
-{
-	int ln1, ln2, lnout, add, addl, i, j, k, ca;
-	char *nout;
-
-	if (argc != 3)
-		printf("Error\n"), exit(98);
-	ln1 = _checknum(argv, 1), ln2 = _checknum(argv, 2);
-	_is_zero(argv), lnout = ln1 + ln2, nout = malloc(lnout + 1);
-	if (nout == NULL)
-		printf("Error\n"), exit(98);
-	nout = _initialize_array(nout, lnout);
-	k = lnout - 1, i = ln1 - 1, j = ln2 - 1, ca = addl = 0;
-	for (; k >= 0; k--, i--)
+	result = calloc(len1 + len2, sizeof(int));
+	if (!result)
 	{
-		if (i < 0)
+		printf("Error\n");
+		exit(98);
+	}
+	int i, mul;
+	int j, sum;
+
+	for (i = len1 - 1; i >= 0; i--)
+	{
+		for (int j = len2 - 1; j >= 0; j--)
 		{
-			if (addl > 0)
-			{
-				add = (nout[k] - '0') + addl;
-				if (add > 9)
-					nout[k - 1] = (add / 10) + '0';
-				nout[k] = (add % 10) + '0';
-			}
-			i = ln1 - 1, j--, addl = 0, ca++, k = lnout - (1 + ca);
-		}
-		if (j < 0)
-		{
-			if (nout[0] != '0')
-				break;
-			lnout--;
-			free(nout), nout = malloc(lnout + 1), nout = _initialize_array(nout, lnout);
-			k = lnout - 1, i = ln1 - 1, j = ln2 - 1, ca = addl = 0;
-		}
-		if (j >= 0)
-		{
-			add = ((argv[1][i] - '0') * (argv[2][j] - '0')) + (nout[k] - '0') + addl;
-			addl = add / 10, nout[k] = (add % 10) + '0';
+			mul = (num1[i] - '0') * (num2[j] - '0');
+			sum = result[i + j + 1] + mul;
+			result[i + j] += sum / 10;
+			result[i + j + 1] = sum % 10;
 		}
 	}
-	printf("%s\n", nout);
+	int i;
+
+	i = 0;
+	while (i < len1 + len2 - 1 && result[i] == 0)
+		i++;
+	while (i < len1 + len2)
+		_putchar(result[i++] + '0');
+	_putchar('\n');
+	free(result);
+}
+
+/**
+ * main - entry point
+ * @argc: The number of arguments passed to the program
+ * @argv: An array of strings containing the arguments passed to the program
+ *
+ * Return: 0 on success, 98 on failure
+ */
+
+int main(int argc, char **argv)
+{
+	if (argc != 3 || !_isdigit(argv[1]) || !_isdigit(argv[2]))
+	{
+		printf("Error\n");
+		exit(98);
+	}
+	_mul(argv[1], argv[2]);
 	return (0);
 }
+
