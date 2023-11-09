@@ -18,15 +18,15 @@ char *create_array(unsigned int size, char c)
 	}
 
 	arrchar = malloc(sizeof(char) * size);
-	for (i = 0; i < size; i++)
-	{
-		arrchar[i] = c;
-	}
 
 	if (arrchar == NULL)
 	{
 		printf("failed to allocate memory.\n");
 		return (NULL);
 	}
+
+	for (i = 0; i < size; i++)
+		arrchar[i] = c;
+
 	return (arrchar);
 }
