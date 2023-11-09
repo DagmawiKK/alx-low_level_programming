@@ -10,12 +10,22 @@
 char *create_array(unsigned int size, char c)
 {
 	char *arrchar;
+	int i;
+
+	if (size == 0)
+	{
+		return (NULL);
+	}
 
 	arrchar = malloc(sizeof(char) * size);
-	arrchar[0] = c;
+	for (i = 0; i < size; i++)
+	{
+		arrchar[i] = c;
+	}
 
 	if (arrchar == NULL)
 	{
+		fputs("failed to allocate memory.\n", stderr)
 		return (NULL);
 	}
 	return (arrchar);
