@@ -28,9 +28,9 @@ char *str_concat(char *s1, char *s2)
 	while (s2[count2] != '\0')
 		count2++;
 
-	memsize = count2 + count1;
+	memsize = count2 + count1 + 1;
 
-	catstr = malloc(sizeof(char) * (memsize + 1));
+	catstr = malloc(sizeof(char) * memsize);
 	if (catstr == (NULL))
 	{
 		printf("failed to allocate memory\n");
