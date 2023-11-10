@@ -10,34 +10,50 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	char *strout;
-	unsigned int i, j, k, limit;
+	char *catstr;
+  int count1, count2;
+  int memsize;
 
-	if (s1 == NULL)
-		s1 = "";
-	if (s2 == NULL)
-		s2 = "";
+  if (s1 == (NULL))
+    s1 = "";
+  if (s2 == (NULL))
+    s2 = "";
 
-	for (i = 0; s1[i] != '\0'; i++)
-		;
+  count1 = count2 = 0;
 
-	for (j = 0; s2[j] != '\0'; j++)
-		;
+  while (s1[count1] != '\0')
+    count1++;
+  
+  while (s2[count2] != '\0')
+    count2++;
 
-	strout = malloc(sizeof(char) * (i + j + 1));
+  memsize = count2 + count1;
 
-	if (strout == NULL)
-	{
-		free(strout);
-		return (NULL);
-	}
+  catstr = malloc(sizeof(char) * (memsize + 1));
+  if (catstr == (NULL))
+  {
+    printf("failed to allocate memory\n");
+    return (NULL);
+  }
 
-	for (k = 0; k < i; k++)
-		strout[k] = s1[k];
+  int i;
 
-	limit = j;
-	for (j = 0; j <= limit; k++, j++)
-		strout[k] = s2[j];
+  for (i = 0; i < count1; i++)
+  {
+    catstr[i] = s1[i];
+  }
 
-	return (strout);
+  int j;
+  int c;
+
+  c = 0;
+
+  for (j = count1; j < (memsize - 1); i++)
+  {
+    catstr[j] = s2[c];
+    c++;
+  }
+  catstr[memsize - 1] = '\0';
+
+  return (catstr);
 }
