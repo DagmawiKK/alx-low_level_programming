@@ -7,16 +7,16 @@
  */
 char *_strdup(char *str)
 {
-	int i;
-	int count;
+	int i, count;
 	int j;
-	int c;
 	char *newstr;
+
+	count = 0;
 
 	for (i = 0; str[i] != '\0'; i++)
 		count++;
 	
-	newstr = malloc(sizeof(char) * count);
+	newstr = malloc(sizeof(char) * (count + 1));
 	
 	if (newstr == (NULL))
 	{
@@ -24,13 +24,10 @@ char *_strdup(char *str)
 		return (NULL);
 	}
 
-	c = 0;
+	for (j = 0; j < count; j++)
+		newstr[j] = str[j];
 
-	for (j = 0; j <= count; j++)
-	{
-		newstr[j] = str[c];
-		c++;
-	}
+	newstr[j] = '\0';
 
 	return(newstr);
 }
