@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdlib.h>
 
 /**
  * str_concat - concatenates two strings.
@@ -28,19 +27,16 @@ char *str_concat(char *s1, char *s2)
 	while (s2[count2] != '\0')
 		count2++;
 
-	memsize = count2 + count1 + 1;
-
-	catstr = malloc(sizeof(char) * memsize);
+	catstr = malloc(sizeof(char) * (count1 + count2 + 1));
 	if (catstr == (NULL))
 	{
+    free(catstr);
 		printf("failed to allocate memory\n");
 		return (NULL);
 	}
 
 	for (i = 0; i < count1; i++)
-	{
 		catstr[i] = s1[i];
-	}
 
 	c = 0;
 
@@ -49,7 +45,6 @@ char *str_concat(char *s1, char *s2)
 		catstr[j] = s2[c];
 		c++;
 	}
-	catstr[memsize - 1] = '\0';
 
 	return (catstr);
 }
