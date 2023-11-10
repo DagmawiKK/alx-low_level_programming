@@ -21,14 +21,14 @@ char *str_concat(char *s1, char *s2)
 
 	while (s1[count1] != '\0')
 		count1++;
-	
+
 	while (s2[count2] != '\0')
 		count2++;
 
 	catstr = malloc(sizeof(char) * (count1 + count2 + 1));
 	if (catstr == (NULL))
 	{
-    free(catstr);
+		free(catstr);
 		return (NULL);
 	}
 
