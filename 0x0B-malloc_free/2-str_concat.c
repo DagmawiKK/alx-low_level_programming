@@ -11,7 +11,7 @@ char *str_concat(char *s1, char *s2)
 {
 	char *catstr;
 	int count1, count2;
-	int memsize, i;
+	int i;
 	int c, j;
 
 	if (s1 == (NULL))
@@ -40,7 +40,7 @@ char *str_concat(char *s1, char *s2)
 
 	c = 0;
 
-	for (j = count1; j < (memsize - 1); i++)
+	for (j = count1; j < (count1 + count2); i++)
 	{
 		catstr[j] = s2[c];
 		c++;
