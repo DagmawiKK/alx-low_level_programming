@@ -11,14 +11,20 @@ char *_strdup(char *str)
 	int j;
 	char *newstr;
 
+	if (str == (NULL))
+	{
+		printf("failed to allocate memory\n");
+		return (NULL);
+	}
+
 	count = 0;
 
 	for (i = 0; str[i] != '\0'; i++)
 		count++;
-	
+
 	newstr = malloc(sizeof(char) * (count + 1));
-	
-	if (newstr == (NULL) || str == (NULL))
+
+	if (newstr == (NULL))
 	{
 		printf("failed to allocate memory\n");
 		return (NULL);
@@ -29,5 +35,5 @@ char *_strdup(char *str)
 
 	newstr[j] = '\0';
 
-	return(newstr);
+	return (newstr);
 }
