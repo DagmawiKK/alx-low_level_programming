@@ -10,9 +10,7 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *catstr;
-	int count1, count2;
-	int i;
-	int c, j;
+	unsigned int count1, count2, i, c, j;
 
 	if (s1 == (NULL))
 		s1 = "";
@@ -31,7 +29,6 @@ char *str_concat(char *s1, char *s2)
 	if (catstr == (NULL))
 	{
     free(catstr);
-		printf("failed to allocate memory\n");
 		return (NULL);
 	}
 
@@ -40,7 +37,7 @@ char *str_concat(char *s1, char *s2)
 
 	c = 0;
 
-	for (j = count1; j < (count1 + count2); i++)
+	for (j = count1; j < (count1 + count2); j++)
 	{
 		catstr[j] = s2[c];
 		c++;
