@@ -1,4 +1,4 @@
-#include "lists.h"
+#include "main.h"
 
 /**
  * pop_listint - deletes the head node of

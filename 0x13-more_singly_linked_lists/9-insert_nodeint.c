@@ -1,4 +1,4 @@
-#include "lists.h"
+#include "main.h"
 
 /**
  * insert_nodeint_at_index - inserts a new node
